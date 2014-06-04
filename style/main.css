@@ -230,8 +230,8 @@ h1.title {
   }
 .gridStyle{
     border: 1px solid rgb(212,212,212);
-    width: 400px;
-    height: 300px;
+    width: 225px;
+    height: 1250px;
 }
 .tile.tile-2-preview .tile-inner {
   color: #f9f6f2;
@@ -239,3 +239,13 @@ h1.title {
   background: url('../tile-sets/test/troll.jpg');
   background-size: 100%;
   font-size: 0;}
+.test{
+  /*background-color: blue;*/
+  background: url('../tile-sets/test/troll.jpg');
+  background-size: 100%;
+  font-size: 0;
+  height: 100px;
+}
+.row{
+  height: 100px;
+}

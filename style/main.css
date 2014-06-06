@@ -230,7 +230,7 @@ h1.title {
   }
 .gridStyle{
     border: 1px solid rgb(212,212,212);
-    width: 225px;
+    width: 350px;
     height: 1250px;
 }
 .tile.tile-2-preview .tile-inner {
@@ -248,4 +248,29 @@ h1.title {
 }
 .row{
   height: 100px;
+}
+
+.btn-file{
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-file input[type=file]{
+  content:"\2b";
+  font-family: "Glyphicons Halflings";
+  background: url('../img/glyphicons-halflings.png') no-repeat -96px -72px;
+  line-height: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 999px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;*/
+  cursor: inherit;
+  display: inline-block;*/
 }

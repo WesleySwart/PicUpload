@@ -1,5 +1,5 @@
 var app = angular.module('myApp',['ngGrid']);
-app.controller('MyCtrl', function($scope){
+app.controller('GridCtrl', function($scope){
 	$scope.myData = [{original: "2", preview: ""},
 					 {original: "4", preview: ""},
 					 {original: "8", preview: ""},
@@ -16,10 +16,17 @@ app.controller('MyCtrl', function($scope){
 		data: 'myData',
 		rowHeight: 100,
 		columnDefs: [{field: 'original', displayName: 'Original', width: 100},
-		{field: 'preview', displayName: 'Preview', width: 100, cellTemplate: '<div ng-class="{test: row.getProperty(\'original\') == \'2\'}"><div class="ngCellText">{{row.getProperty(\'original\')}}</div></div>'}]
+		{field: 'preview', displayName: 'Preview', width: 100, cellTemplate: '<div ng-class="{test: row.getProperty(\'original\') == \'2\'}"><div class="ngCellText">{{row.getProperty(\'original\')}}</div></div>'},
+		{field: 'edit', displayName: '', width: 150, cellTemplate: '<span class ="btn btn-default btn-file icon icon-edit" ng-controller="UploadCtrl"><form action="/uploads" ng-upload="completed(content)"><input type="file" name="avatar"></input><div style=\'cursor: pointer\' upload-submit></div></form></span>'}]
 	};
-
 });
+
+app.controller('UploadCtrl', function($scope){
+	$scope.complete = function(content){
+		console.log(content);
+	}
+});
+//
 // 		columnDefs: [{field: 'original', displayName: 'Original', width: 90},
 //		{field: 'preview', displayName: 'Preview', width: 90, cellTemplate: '<div ng-class="{\'tile.tile-2-preview .tile-inner\': row.getProperty(\'preview\') == \'2.jpg\'}"><div class="ngCellText">{{row.getProperty(\'preview\')}}</div></div>'}]
 //'imageTemplate.html'}]

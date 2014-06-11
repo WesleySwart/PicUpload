@@ -212,6 +212,13 @@ h1.title {
   .tile-container {
     position: absolute;
     z-index: 2; }
+
+  .restart-button {
+  width: 42%;
+  padding: 0;
+  display: block;
+  box-sizing: border-box;
+  margin-top: 2px; }
   table
   {
 
@@ -284,4 +291,5 @@ h1.title {
   border: 2px #f1f1f1 dashed;
   border-radius: 5px;
   line-height: 34px;
+  margin-bottom: 10px;
 }

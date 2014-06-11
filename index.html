@@ -28,10 +28,29 @@
         Upload your favorite pictures to correspond with the numbered tiles!
       </p>
     </div>
-    <div ng-controller = "GridCtrl">
-      <div class="gridStyle" ng-grid="gridOptions">
+    <!-- Being Flow.js wrapper -->
+    <div flow-int flow-files-submitted="$flow.upload()" flow-file-added="$file.getExtention()" class="ng-scope">
+      <div class = "drop" flow-drop ng-class ="dropClass">
+
+        <span class="btn-file" flow-btn>Upload Image
+          <input type="file"/>
+        </span>
+
+        <span class="btn-file" flow-btn flow-directory>Upload Folder of Images
+          <input type="file"/>
+        </span>
+        <b>OR</b> Drag and Drop your images here.
       </div>
+      <!-- <div class= "gridContainer"> -->
+        <!-- Begin Grid -->
+        <div ng-controller = "GridCtrl">
+          <div class="gridStyle" ng-grid="gridOptions">
+          </div>
+        </div>
+        <!-- End Grid -->
+      <!-- </div> -->
     </div>
+    <!-- End Flow.js wrapper -->
     <div>
     </div>
     <div>
@@ -49,6 +68,7 @@
   <script src="js/local_storage_manager.js"></script>
   <script src="js/game_manager.js"></script>
   <script src="js/application.js"></script> 
+  <script src="js/bootstrap.js"></script>
 -->
   
   <script src="js/jquery-2.1.1.min.js"></script>
@@ -56,7 +76,7 @@
   <script src="js/angular-route.js"></script>
   <script src="js/ng-grid-2.0.11.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/bootstrap.js"></script>
   <script src="js/ng-upload.js"></script>
+  <script src="js/ng-flow.js"></script>
 </body>
 </html>

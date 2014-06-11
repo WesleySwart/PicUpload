@@ -3,7 +3,7 @@ html, body {
   margin: 0;
   padding: 0;
   background: #faf8ef;
-  color: #776e65;
+  color: #776e65 !important;
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 18px; }
 
@@ -256,9 +256,9 @@ h1.title {
 }
 
 .btn-file input[type=file]{
-  content:"\2b";
+  /*content:"\2b";
   font-family: "Glyphicons Halflings";
-  background: url('../img/glyphicons-halflings.png') no-repeat -96px -72px;
+  background: url('../img/glyphicons-halflings.png') no-repeat -96px -72px; */
   line-height: 1;
   position: absolute;
   top: 0;
@@ -270,7 +270,18 @@ h1.title {
   filter: alpha(opacity=0);
   opacity: 0;
   outline: none;
-  background: white;*/
+  background: white;
   cursor: inherit;
-  display: inline-block;*/
+  display: inline-block;
+}
+
+.gridContainer{
+
+}
+
+.drop{
+  padding: 15px;
+  border: 2px #f1f1f1 dashed;
+  border-radius: 5px;
+  line-height: 34px;
 }
